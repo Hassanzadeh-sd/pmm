@@ -2,7 +2,7 @@ version: '2'
 
 services:
   pmm-server:
-    image: percona/pmm-server:2.40.1
+    image: percona/pmm-server:2.41.0
     container_name: pmm-server
     ports:
       - '980:80'
