@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  pmm-server:
+    image: percona/pmm-server:2.40.1
+    container_name: pmm-server
+    ports:
+      - '980:80'
+      - '9443:443'
+    restart: always
+    environment:
+      - METRICS_RETENTION=1440h
+      - METRICS_MEMORY=4194304
+      - METRICS_RESOLUTION=1s
+      - QUERIES_RETENTION=30
+    volumes:
+      - ./pmm-data:/srv
