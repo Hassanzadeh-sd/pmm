@@ -64,10 +64,8 @@ track_io_timing = on             # Capture read/write stats
 
 ### 10.Register the server for monitoring :
 ```
-sudo pmm-admin add postgresql --username=pmm --password=<pass> --host=127.0.0.1 --port=,db-port> --database=<database-name> --service-name=<service-name> --query-source=pgstatements --debug
-
+sudo pmm-admin add postgresql --username=pmm --password=<pass> --host=127.0.0.1 --port=,db-port> --database=<database-name> --service-name=<service-name> --query-source=pgstatements comments-parsing="off" --debug
 ```
-
 
 
 ### 6.Enjoy it ;)
